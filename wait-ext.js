@@ -24,10 +24,16 @@ new (function() {
         }, wait*1000);
     };
 
+    ext.second_fn = function(callback) {
+        console.log('second fn called');
+        callback();
+    };
+
     // Block and block menu descriptions
     var descriptor = {
         blocks: [
             ['w', 'wait for random time', 'wait_random'],
+            ['w', 'second function', 'second_fn'],
         ]
     };
 
